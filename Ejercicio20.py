@@ -1,8 +1,6 @@
 try:
     nota = float(input("Introduce la calificación (0-10): "))
-    # "match" es el "switch" de Python
     match nota:
-        # El 'n' es una variable temporal que captura el valor de 'nota'
         case n if n < 0 or n > 10:
             print("Error: La nota debe estar entre 0 y 10.")
             
@@ -14,7 +12,7 @@ try:
 
         case n if 5 <= n < 6:
             print("Suficiente")
-            
+
         case n if 6 <= n < 7:
             print("Bien")
             
@@ -24,7 +22,7 @@ try:
         case n if 9 <= n <= 10:
             print("Sobresaliente")
             
-        case _:  # Esto equivale al "default" (por si algo escapa a la lógica anterior)
+        case _: 
             print("Valor no reconocido")
 
 except ValueError:

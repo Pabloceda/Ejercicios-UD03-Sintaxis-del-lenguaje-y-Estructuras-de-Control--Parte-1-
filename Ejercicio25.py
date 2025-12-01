@@ -6,7 +6,6 @@ def matricula_universidad():
     except ValueError:
         print("Error: Por favor, introduce un nombre válido.")
         return
-    #Pedir facultad, solo son validas: Ingenieria de sistemas, derecho, ingenieria naviera, ingenieria pesquera, contabilidad y administracion  
     
     facultad_validas = ['ingenieria de sistemas', 'derecho', 'ingenieria naviera', 'ingenieria pesquera', 'contabilidad', 'administracion']
     try:
@@ -37,11 +36,9 @@ def matricula_universidad():
             matricula = 360
             mensualidad = 520
         case _:
-            # Este caso ya está cubierto por la validación anterior, pero es buena práctica
             print("Error: Facultad no reconocida.")
             return
     
-    #Mostrar el importe matricula, mensualidad, el igv 18% del total y el importe total
 
     igv = (matricula + mensualidad) * 0.18
     total = matricula + mensualidad + igv
